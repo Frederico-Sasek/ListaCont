@@ -1,6 +1,25 @@
 #ifndef LISTACONT_INCLUDED
 #define LISTACONT_INCLUDED
 
+#include <iostream>
 
+using namespace std;
+
+class ListaCont
+{
+public:
+    ListaCont(int tam);
+    ∼ListaCont();
+    int get(int k);
+    void insere(int val); // insere na ordem
+    void remove(int val); // remove no
+    void imprime();
+    bool busca(int val);
+private:
+    int max; // capacidade maxima de elementos
+    int n; // quantidade de nos na lista
+    int *vet; // vetor que armazena a lista
+    int buscaBinaria(int val);
+};
 
 #endif // LISTACONT_INCLUDED

@@ -1,4 +1,5 @@
 #include <iostream>
+#include "ListaCont.h";
 
 using namespace std;
 
