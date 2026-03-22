@@ -1,5 +1,5 @@
-#ifndef LISTACONT_INCLUDED
-#define LISTACONT_INCLUDED
+#ifndef LISTACONT_H
+#define LISTACONT_H
 
 #include <iostream>
 
@@ -11,10 +11,12 @@ public:
     ListaCont(int tam);
     ∼ListaCont();
     int get(int k);
-    void insere(int val); // insere na ordem
-    void remove(int val); // remove no
+    int set(int k, int val);
+    void insere(int val);
+    void remove(int val);
     void imprime();
     bool busca(int val);
+    void help();
 private:
     int max; // capacidade maxima de elementos
     int n; // quantidade de nos na lista
@@ -22,4 +24,4 @@ private:
     int buscaBinaria(int val);
 };
 
-#endif // LISTACONT_INCLUDED
+#endif // LISTACONT_H
