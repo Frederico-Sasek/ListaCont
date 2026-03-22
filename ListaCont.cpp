@@ -11,29 +11,29 @@ ListaCont::~ListaCont()
     delete[] vet;
 }
 
-ListaCont::int get(int k){
+int ListaCont::get(int k){
     if(k>=0 && k<n){
         return vet[k]
     }
 }
-ListaCont::void set(int k,int val){
+void ListaCont::set(int k,int val){
     if(k>=0 && k<n){
         vet[k] = val
     }
 }
-ListaCont::void insere(int val){
+void ListaCont::insere(int val){
     if(n < max){
         vet[n++] = val;
     }
 }
-ListaCont::void remove(int val){
+void ListaCont::remove(int val){
     if(n < max){
         vet[n--] = 0;
     }
 }
 
 
-ListaCont::void imprime(){
+void ListaCont::imprime(){
         for(int i = 0; i < n; i++){
             cout << vet [i] << " ";
         }
@@ -42,7 +42,7 @@ ListaCont::void imprime(){
 
 
 
-ListaCont::bool busca(int val){
+bool ListaCont::busca(int val){
     for(int i = 0; i < n; i++){
         if(val == vet[i])
             return true;
@@ -50,7 +50,7 @@ ListaCont::bool busca(int val){
     return false;   
 }
 
-ListaCont::void help(){
+void ListaCont::help(){
     cout << "Comands List: "<<endl;
     cout << "ListaCont(int tam): constructor of the list"<<endl;
     cout << "tam -> the numeber of itens you want to creat the list"<<endl

@@ -9,7 +9,7 @@ class ListaCont
 {
 public:
     ListaCont(int tam);
-    ∼ListaCont();
+    ~ListaCont();
     int get(int k);
     int set(int k, int val);
     void insere(int val);
