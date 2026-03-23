@@ -13,12 +13,12 @@ ListaCont::~ListaCont()
 
 int ListaCont::get(int k){
     if(k>=0 && k<n){
-        return vet[k]
+        return vet[k];
     }
 }
 void ListaCont::set(int k,int val){
     if(k>=0 && k<n){
-        vet[k] = val
+        vet[k] = val;
     }
 }
 void ListaCont::insere(int val){
@@ -47,13 +47,13 @@ bool ListaCont::busca(int val){
         if(val == vet[i])
             return true;
     }
-    return false;   
+    return false;
 }
 
 void ListaCont::help(){
     cout << "Comands List: "<<endl;
     cout << "ListaCont(int tam): constructor of the list"<<endl;
-    cout << "tam -> the numeber of itens you want to creat the list"<<endl
+    cout << "tam -> the numeber of itens you want to creat the list"<<endl;
 
     cout << "∼ListaCont(): Destructor comand"<<endl;
 
@@ -68,7 +68,7 @@ void ListaCont::help(){
     cout << "val -> the value to put in the end of the list"<<endl;
 
     cout << "void remove() remove the last value of the list"<<endl;
- 
+
     cout << "void imprime(): Show every value in the list"<<endl;
 
     cout << "bool busca(int val): seek the existence of the value in the list"<<endl;

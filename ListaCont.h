@@ -1,27 +1,25 @@
-#ifndef LISTACONT_H
-#define LISTACONT_H
+#ifndef LISTACONT_INCLUDE
+#define LISTACONT_INCLUDE
 
 #include <iostream>
 
 using namespace std;
 
-class ListaCont
-{
-public:
-    ListaCont(int tam);
-    ~ListaCont();
-    int get(int k);
-    int set(int k, int val);
-    void insere(int val);
-    void remove(int val);
-    void imprime();
-    bool busca(int val);
-    void help();
-private:
-    int max; // capacidade maxima de elementos
-    int n; // quantidade de nos na lista
-    int *vet; // vetor que armazena a lista
-    int buscaBinaria(int val);
+class ListaCont{
+    public:
+        ListaCont(int tam);
+        ~ListaCont();
+        int get(int k);
+        void set(int k, int val);
+        void insere(int val);
+        void remove(int val);
+        void imprime();
+        bool busca(int val);
+        void help();
+    private:
+        int max;
+        int n;
+        int *vet;
 };
 
-#endif // LISTACONT_H
+#endif // LISTACONT_INCLUDE
