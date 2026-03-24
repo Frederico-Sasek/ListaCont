@@ -14,8 +14,14 @@ class ListaCont{
         void insere(int val);
         void remove();
         void imprime();
-        bool busca(int val);
+        bool existe(int val);
+        int busca(int val);
         void help();
+        void insereInicio(int val);
+        void removeInicio();
+        void insereK(int val, int k);
+        void removeK(int k);
+
 
 
 
