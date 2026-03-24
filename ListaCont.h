@@ -12,14 +12,20 @@ class ListaCont{
         int get(int k);
         void set(int k, int val);
         void insere(int val);
-        void remove(int val);
+        void remove();
         void imprime();
         bool busca(int val);
         void help();
+
+
+
     private:
         int max;
         int n;
         int *vet;
+        void aumenta();
+        void copia(int v1[],int v2[]);
+
 };
 
 #endif // LISTACONT_INCLUDE

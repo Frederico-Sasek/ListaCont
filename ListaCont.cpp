@@ -6,44 +6,65 @@ ListaCont::ListaCont(int tam){
     vet = new int[max];
 }
 
-ListaCont::~ListaCont()
-{
+ListaCont::~ListaCont(){
     delete[] vet;
 }
 
 int ListaCont::get(int k){
-    if(k>=0 && k<n){
+    if(k>=0 && k<n)
+    {
         return vet[k];
     }
 }
+
 void ListaCont::set(int k,int val){
-    if(k>=0 && k<n){
+    if(k>=0 && k<n)
+    {
         vet[k] = val;
     }
 }
-void ListaCont::insere(int val){
-    if(n < max){
-        vet[n++] = val;
+void ListaCont::copia(int v1[], int v2[]){
+    for(int i = 0; i < max; i ++){
+        v2[i] = v1[i];
+        //cout << v1[i] << " ";
     }
+    //cout  << endl;
 }
-void ListaCont::remove(int val){
-    if(n < max){
-        vet[n--] = 0;
-    }
+
+void ListaCont::aumenta(){
+
+    int *vetTemp = new int[max];
+    copia(vet,vetTemp);
+    delete [] vet;
+    max = max+1;
+    vet = new int[max];
+    copia(vetTemp,vet);
+    delete [] vetTemp;
+}
+
+void ListaCont::insere(int val){
+    if(n == max)
+        aumenta();
+    vet[n++] = val;
+}
+void ListaCont::remove(){
+    vet[n--] = 0;
 }
 
 
 void ListaCont::imprime(){
-        for(int i = 0; i < n; i++){
-            cout << vet [i] << " ";
-        }
-        cout << endl;
+    for(int i = 0; i < n; i++)
+    {
+        cout << vet [i] << " ";
+    }
+    cout << endl;
 }
 
 
 
 bool ListaCont::busca(int val){
-    for(int i = 0; i < n; i++){
+    for(int i = 0; i < n; i++)
+    {
         if(val == vet[i])
             return true;
     }
