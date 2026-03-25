@@ -1,7 +1,7 @@
 #include "ListaCont.h"
 
 ListaCont::ListaCont(int tam){
-    max = tam;
+    max = tam*1.2;
     n = 0;
     vet = new int[max];
 }
@@ -36,7 +36,7 @@ void ListaCont::aumenta(){
     int *vetTemp = new int[max];
     copia(vet,vetTemp);
     delete [] vet;
-    max = max+1;
+    max = max*1.5;
     vet = new int[max];
     copia(vetTemp,vet);
     delete [] vetTemp;
