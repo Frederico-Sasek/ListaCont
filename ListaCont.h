@@ -21,6 +21,12 @@ class ListaCont{
         void removeInicio();
         void insereK(int val, int k);
         void removeK(int k);
+        void limpa();
+        int nuNos();
+        void troca(int pos1 , int pos2);
+        int maior();
+        int menor();
+        void ordena();
 
 
 
@@ -30,7 +36,12 @@ class ListaCont{
         int n;
         int *vet;
         void aumenta();
+        void aumenta(int novoMax);
+        void auxOrdena(int esq,int dir);
         void copia(int v1[],int v2[]);
+        int particionamento(int esq,int dir);
+
+
 
 };
 
